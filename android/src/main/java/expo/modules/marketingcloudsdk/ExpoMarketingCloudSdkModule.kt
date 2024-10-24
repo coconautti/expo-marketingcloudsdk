@@ -197,7 +197,7 @@ class ExpoMarketingCloudSdkModule : Module() {
     AsyncFunction("enableAnalytics") { promise: Promise ->
       whenPushModuleReady(promise) { mp ->
         mp.analyticsManager.enableAnalytics()
-        promise.resolve(mp.analyticsManager.enableAnalytics())
+        promise.resolve(mp.analyticsManager.areAnalyticsEnabled())
       }
     }
 
